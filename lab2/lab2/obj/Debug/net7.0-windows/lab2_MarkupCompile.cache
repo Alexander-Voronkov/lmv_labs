@@ -1,5 +1,5 @@
 ﻿lab2
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\OleksandrVoronkov\source\repos\lab2\lab2\App.xaml
 11407045341
 
-6196223904
+41387426216
 198-200740077
 MainWindow.xaml;
 
-True
+False
 

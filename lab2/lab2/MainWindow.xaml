@@ -5,13 +5,44 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:lab2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Laboratory_work_1_2" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
+
+        <Label Name="MessageLabel" Content="Enter a message" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20px"></Label>
+        <TextBox Name="MessageTextBox" Text="{Binding MessageText, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:MainWindow}}}" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="15 50"></TextBox>
+        <Button Name="ShowMessageBtn" Content="Show Message" FontSize="20px" Margin="0 50" Grid.Column="3" Grid.Row="0" Grid.RowSpan="2" Click="Button_Click_1" ></Button>
+        <Button Name="DefaultMessageBtn" Content="Default Message" FontSize="20px" Margin="5 15" Grid.Column="1" Grid.Row="1" Click="Button_Click_2" ></Button>
+        <Button Name="ClearMessageBtn" Content="Clear Message" FontSize="20px" Margin="5 15" Grid.Column="2" Grid.Row="1" Click="Button_Click_3"></Button>
+        <Label Name="ProgramLabel" Content="Run a Program" FontSize="20px" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+        <ComboBox Name="ProgramComboBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 15"></ComboBox>
+        <Button Name="ProgramBtn" Content="Run a Program" FontSize="20px" Margin="5 15" Grid.Column="4" Grid.Row="2" Click="ProgramBtn_Click"></Button>
+        <GroupBox Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10px" FontSize="20px" Header="Enable Actions">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <CheckBox Name="CB1" VerticalContentAlignment="Center" Content="Enable Message Action" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
+                <CheckBox Name="CB2" VerticalContentAlignment="Center"  Content="Enable Program Action" Checked="CheckBox_Checked_1" Unchecked="CheckBox_Unchecked_1"/>
+            </StackPanel>            
+        </GroupBox>
+        <GroupBox Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" Margin="10px" FontSize="20px" Header="Show actions">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <CheckBox Name="ShowCB1" VerticalContentAlignment="Center" Content="Show Message Action" Checked="CheckBox_Checked_2" Unchecked="ShowCB1_Unchecked"></CheckBox>
+                <CheckBox Name="ShowCB2" VerticalContentAlignment="Center" Content="Show Program Action" Checked="ShowCB2_Checked" Unchecked="ShowCB2_Unchecked"></CheckBox>
+                <Button Name="Set_Show_Actions_Check" Content="SetShowActionsCheck" Margin="0 5" Click="Set_Show_Actions_Check_Click"></Button>
+            </StackPanel>           
+        </GroupBox>
+        <Button Content="Exit" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="5" FontSize="20px" Margin="120px 10px" Click="Button_Click"></Button>
     </Grid>
 </Window>
