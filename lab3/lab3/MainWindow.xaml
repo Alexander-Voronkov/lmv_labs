@@ -1,0 +1,79 @@
+﻿<Window x:Class="lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab3"
+        mc:Ignorable="d"
+        Title="Laboratory_Work_1_3" Height="450" Width="800" KeyDown="Window_KeyDown">
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="_Message Ctrl+M" Click="OnMessage">
+                <MenuItem.Icon>
+                    <Image Source="/resources/question.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="_Check Ctrl+C" Click="OnCheck">
+                <MenuItem.Icon>
+                    <Image Source="/resources/success.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="_Exit Ctrl+E" Click="OnExit">
+                <MenuItem.Icon>
+                    <Image Source="/resources/exit.png"></Image>
+                </MenuItem.Icon>
+            </MenuItem>
+        </ContextMenu>
+    </Window.ContextMenu>
+
+
+
+    <Grid>
+        <Menu Height="25" VerticalAlignment="Top" Grid.ColumnSpan="4">
+            <Menu.Items>
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Message Ctrl+M" Click="OnMessage">
+                        <MenuItem.Icon>
+                            <Image Source="/resources/question.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Check Ctrl+C" Click="OnCheck">
+                        <MenuItem.Icon>
+                            <Image Source="/resources/success.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="_Exit Ctrl+E" Click="OnExit">
+                        <MenuItem.Icon>
+                            <Image Source="/resources/exit.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Name="InsertMenuItem" Header="_Insert">
+
+                </MenuItem>
+                <MenuItem Header="_Help">
+                    <MenuItem Header="_About Ctrl+A" Click="OnAbout">
+                        <MenuItem.Icon>
+                            <Image Source="/resources/info.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu.Items>
+        </Menu>
+        <ToolBarTray Orientation="Vertical" Width="25" HorizontalAlignment="Left" Margin="0 25">
+            <ToolBar Width="25">
+                <Button Click="OnExit">
+                    <Image Source="/resources/exit.png"></Image>
+                </Button>
+                <Separator></Separator>
+                <Button Click="OnMessage">
+                    <Image Source="/resources/question.png"></Image>
+                </Button>
+                <Separator></Separator>
+                <Button Click="OnCheck">
+                    <Image Source="/resources/success.png"></Image>
+                </Button>
+            </ToolBar>
+        </ToolBarTray>
+    </Grid>
+</Window>
