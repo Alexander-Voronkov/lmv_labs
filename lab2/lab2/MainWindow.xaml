@@ -28,7 +28,7 @@
         <Button Name="DefaultMessageBtn" Content="Default Message" FontSize="20px" Margin="5 15" Grid.Column="1" Grid.Row="1" Click="Button_Click_2" ></Button>
         <Button Name="ClearMessageBtn" Content="Clear Message" FontSize="20px" Margin="5 15" Grid.Column="2" Grid.Row="1" Click="Button_Click_3"></Button>
         <Label Name="ProgramLabel" Content="Run a Program" FontSize="20px" Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
-        <ComboBox Name="ProgramComboBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 15"></ComboBox>
+        <ComboBox IsEditable="True" Name="ProgramComboBox" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10 15"></ComboBox>
         <Button Name="ProgramBtn" Content="Run a Program" FontSize="20px" Margin="5 15" Grid.Column="4" Grid.Row="2" Click="ProgramBtn_Click"></Button>
         <GroupBox Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="10px" FontSize="20px" Header="Enable Actions">
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">

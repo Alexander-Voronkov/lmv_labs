@@ -69,8 +69,15 @@ namespace lab2
 
         private void ProgramBtn_Click(object sender, RoutedEventArgs e)
         {
-            if(ProgramComboBox.SelectedValue != null)
-                Process.Start(ProgramComboBox.SelectedValue.ToString()!);
+            try
+            {
+                if (!string.IsNullOrEmpty(ProgramComboBox.Text))
+                    Process.Start(ProgramComboBox.SelectedValue.ToString()!);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Set_Show_Actions_Check_Click(object sender, RoutedEventArgs e)
